@@ -4,26 +4,19 @@ def quick_sort(alist, first, last):
     if first >= last:
         return
 
-    # n = len(alist)
     low = first
     high = last
     mid_value = alist[first]
-
-
-
 
     while low < high:
         #碰到与mid_value相等的元素还是继续往左走，也就是相同的元素都放在右边high那里
         while low < high and alist[high] >= mid_value:
             high -= 1
         alist[low] = alist[high]
-        #low += 1
-
 
         while low < high and alist[low] < mid_value:
             low += 1
         alist[high] = alist[low]
-        #high -= 1
     alist[low] = mid_value
     #利用递归的思想
     # quick_sort(alist[:low-1])
