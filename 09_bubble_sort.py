@@ -21,7 +21,15 @@ def bubble_sort2(alist):
                 alist[j], alist[j+1] = alist[j+1], alist[j]
     return alist
 
+# def bubble_sort3(alist):
+#     n = len(alist)
+#     for i in range(n):
+#         for j in range(i,n):
+#             if alist[i]>alist[j]:
+#                 alist[i], alist[j] = alist[j], alist[i]
+#     return alist
 
 ll = [2,3,1,4,6,5]
 print(bubble_sort(ll))
 print(bubble_sort2(ll))
+# print(bubble_sort3(ll))
